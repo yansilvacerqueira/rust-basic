@@ -1,3 +1,7 @@
+mod new_module;
+
+use crate::new_module::funcs::get_name;
+
 fn add_number(num: u32) -> u32 {
     return 5 + num
 }
@@ -17,5 +21,10 @@ fn main() {
 
     x = add_number_two(x);
     println!("x2 is {}", x);
-    
+
+    let some_name: &str = "Johanna";
+    let name = get_name(some_name);
+    println!("name is {}", name);
+
 }
+
